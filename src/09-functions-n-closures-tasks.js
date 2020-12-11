@@ -23,7 +23,7 @@
  *
  */
 function getComposition(f, g) {
-  return function (...arg) {
+  return function composition(...arg) {
     const current = g(...arg);
     return f(current);
   };
@@ -46,7 +46,7 @@ function getComposition(f, g) {
  *
  */
 function getPowerFunction(exponent) {
-  return function (...arg) {
+  return function powerFunction(...arg) {
     return arg ** exponent;
   };
 }
@@ -177,7 +177,7 @@ function logger(func, logFunc) {
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
 function partialUsingArguments(fn, ...args1) {
-  return function (...args) {
+  return function Magic(...args) {
     return fn(...args1, ...args);
   };
 }
